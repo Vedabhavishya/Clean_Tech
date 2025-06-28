@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Municipal Waste Classification</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { font-family: 'Segoe UI', sans-serif; height: 100%; }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .navbar a.active::after,
+    .navbar a:hover::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #f08d8d;
+      bottom: -4px;
+      left: 0;
+    }
+
+    .hero {
+      background: url('https://earth5r.org/wp-content/uploads/2024/03/Indore-Waste-Management-Earth5R-Environmental-organisation-app-1230x767-1.webp') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">MUNICIPAL WASTE CLASSIFICATION</div>
+      <nav>
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/predict">Predict</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="content">
+      <h2>Welcome to <strong>municipal waste classification</strong></h2>
+      <p>
+        This platform allows you to upload images of waste materials, and our advanced
+        machine learning model will classify them into appropriate categories. Proper
+        waste classification helps in efficient recycling and waste management,
+        making our environment cleaner and more sustainable.
+      </p>
+      <a href="/predict" class="btn">Get Started</a>
+    </div>
+  </section>
+</body>
+</html>

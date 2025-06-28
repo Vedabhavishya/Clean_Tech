@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Municipal Waste Classification</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 0;
+      color: white;
+      z-index: 100;
+    }
+
+    .logo { color: white; font-size: 20px; font-weight: bold; }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .navbar a.active::after,
+    .navbar a:hover::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #f08d8d;
+      bottom: -4px;
+      left: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffe5ec;
+      color: #d6336c;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    h1 span { color: #d6336c; }
+
+    .subtitle {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 40px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 30px;
+      align-items: flex-start;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 250px;
+      text-align: left;
+    }
+
+    .contact-info div {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .contact-info div i {
+      font-size: 20px;
+      color: #d6336c;
+      padding: 10px;
+      background-color: #ffe5ec;
+      border-radius: 50%;
+    }
+
+    .contact-form {
+      flex: 2;
+      min-width: 300px;
+      text-align: left;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .form-row input {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    input, textarea {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    textarea { min-height: 120px; }
+
+    .btn {
+      background: linear-gradient(to right, #f46b45, #eea849);
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">MUNICIPAL WASTE CLASSIFICATION</div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/predict">Predict</a></li>
+          <li><a href="/contact" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="badge">CONTACT</div>
+    <h1>Contact <span>Us</span></h1>
+    <p class="subtitle">
+      We are here to help you make the best choices for a sustainable environment and
+      effective waste management. Reach out for info or help with classification.
+    </p>
+
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i><div><strong>Location:</strong><br>Mehdipatnam, Hyderabad, 535022</div></div>
+        <div><i class="fas fa-envelope"></i><div><strong>Email:</strong><br>NutrigazeOrg@example.com</div></div>
+        <div><i class="fas fa-phone-alt"></i><div><strong>Call:</strong><br>+1 5589 55488 55s</div></div>
+      </div>
+      <div class="contact-form">
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <input type="text" placeholder="Subject" required />
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
